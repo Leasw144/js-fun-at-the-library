@@ -17,12 +17,27 @@ function saveReview(commentary, reviews) {
   }
 }
 
+function calculatePageCount(title) {
+ var length = title.length * 20;
+  return length;
+}
+
+function writeBook(bookTitle, bookCharacter, pageCount, genre) {
+  var mahBook = {
+    title: bookTitle,
+    mainCharacter:bookCharacter,
+    genre: 'fantasy',
+  }
+  mahBook.pageCount = calculatePageCount(bookTitle)
+  return mahBook
+}
+
 module.exports = {
   createTitle: createTitle,
   buildMainCharacter: buildMainCharacter,
   saveReview: saveReview,
-  // calculatePageCount: calculatePageCount,
-  // writeBook: writeBook,
+  calculatePageCount: calculatePageCount,
+  writeBook: writeBook,
   // editBook: editBook
 }
 

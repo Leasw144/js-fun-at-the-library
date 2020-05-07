@@ -83,27 +83,28 @@ describe("book.js", function () {
       assert.isFunction(calculatePageCount);
     });
   
-    it.skip("should add 20 pages per letter in the title", function () {
+    it("should add 20 pages per letter in the title", function () {
       var bookTitle = createTitle("Teenage Ghoul");
-      var bookPageCount = calculatePageCount(ghoulTitle);
-  
+      var bookPageCount = calculatePageCount(bookTitle);
+
       assert.equal(bookPageCount, 340);
     });
   
-    it.skip("should add 20 pages per letter for a different title", function () {
+    it("should add 20 pages per letter for a different title", function () {
       var bookTitle = createTitle("The Dragon in the Summer");
       var bookPageCount = calculatePageCount(bookTitle);
+
   
       assert.equal(bookPageCount, 560);
     });
   });
 
   describe("writeBook", function() {
-    it.skip("should be a function", function () {
+    it("should be a function", function () {
       assert.isFunction(writeBook);
     });
   
-    it.skip("should return a book object", function () {
+    it("should return a book object", function () {
       var bookTitle = createTitle("Teenage Ghoul");
       var bookCharacter = buildMainCharacter("Vassya", 16, "she/her");
       var book = writeBook(bookTitle, bookCharacter, "fantasy");
