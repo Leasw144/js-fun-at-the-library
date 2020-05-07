@@ -11,17 +11,22 @@ function unshelfBook(book, genre) {
       genre.splice(i, 1)
     }
   }
-  // if(genre.includes(book)) {
-  //   genre.map(x => book !== genre)
-  //   return genre
-  // }
+}
+
+function listTitles(fantasyShelf) {
+  console.log(fantasyShelf)
+  return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].title}`
+}
+
+function searchShelf() {
+  for(var i = 0; i < )
 }
 
 module.exports = {
   shelfBook: shelfBook,
   unshelfBook: unshelfBook,
-  // listTitles: listTitles,
-  // searchShelf: searchShelf
+  listTitles: listTitles,
+  searchShelf: searchShelf
 };
 
 //npm test test/shelf-test.js
