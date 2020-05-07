@@ -132,7 +132,7 @@ describe("book.js", function () {
       assert.isFunction(editBook);
     });
   
-    it.skip("should decrease the book's page count to be three quarters of what it originally was", function () {
+    it("should decrease the book's page count to be three quarters of what it originally was", function () {
       var ghoulTitle = createTitle("Teenage Ghoul");
       var ghoulCharacter = buildMainCharacter("Vassya", 16, "she/her");
       var ghoulBook = writeBook(ghoulTitle, ghoulCharacter, "mystery");
