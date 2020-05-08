@@ -1,8 +1,5 @@
 function shelfBook(book, genre) {
-    if(genre.length >= 3) {
-      return false
-    }
-    genre.unshift(book)
+  genre.length >= 3 ? false : genre.unshift(book)
 }
 
 function unshelfBook(book, genre) {
