@@ -4,9 +4,7 @@ function shelfBook(book, genre) {
 
 function unshelfBook(book, genre) {
   for(var i = 0; i < genre.length; i++) {
-    if(genre[i].title === book) {
-      genre.splice(i, 1)
-    }
+    genre[i].title === book ? genre.splice(i, 1) : false;
   }
 }
 
