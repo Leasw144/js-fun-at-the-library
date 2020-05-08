@@ -14,14 +14,18 @@ function unshelfBook(book, genre) {
 }
 
 function listTitles(fantasyShelf) {
-  console.log(fantasyShelf)
   return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].title}`
 }
 
-function searchShelf() {
-  for(var i = 0; i < )
+function searchShelf(genre, book) {
+  for(var i = 0; i < genre.length; i++) {
+    console.log(genre[i].title, book)
+    if (genre[i].title === book) {
+      return true
+    } 
+  }
+  return false
 }
-
 module.exports = {
   shelfBook: shelfBook,
   unshelfBook: unshelfBook,
