@@ -12,7 +12,6 @@ function createLibrary(name, book) {
 
 function addBook(library, book) {
   var whatGenre = book.genre;
-  console.log(whatGenre)
   if(whatGenre === 'fantasy') { 
     library.shelves.fantasy.push(book)
     }
@@ -24,8 +23,9 @@ function addBook(library, book) {
   }
 }
 
-function checkoutBook() {
-
+function checkoutBook(library, book) {
+  console.log(book)
+  return 'You have now checked out ${book} from the Denver Public Library'
 }
 
 module.exports = {
