@@ -24,8 +24,13 @@ function addBook(library, book) {
 }
 
 function checkoutBook(library, book) {
-  console.log(book)
-  return 'You have now checked out ${book} from the Denver Public Library'
+  // for(var i = 0; i < library.shelves.fiction; i++) {
+    if(library.shelves.fiction[0].title === book) {
+      library.shelves.fiction.shift()
+      return `You have now checked out ${book} from the ${library.name}`
+    }
+    return `Sorry, there are currently no copies of ${book} available at the ${library.name}`
+  // }
 }
 
 module.exports = {
