@@ -9,16 +9,7 @@ function unshelfBook(book, genre) {
 }
 
 function listTitles(fantasyShelf) {
-  console.log(fantasyShelf[0].title)
-  var newShelf = []
-  for(var i = 0; i<fantasyShelf.length; i++) {
-    newShelf.push(fantasyShelf[i].title)
-  }
-  console.log(newShelf)
-  newShelf.join()
-  fantasyShelf = newShelf
-  
-  // return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].title}`
+return `${fantasyShelf[0].title}, ${fantasyShelf[1].title}, ${fantasyShelf[2].title}`
 }
 
 function searchShelf(genre, book) {
