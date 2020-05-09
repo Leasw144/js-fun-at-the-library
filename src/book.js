@@ -26,9 +26,10 @@ function writeBook(bookTitle, bookCharacter) {
   var mahBook = {
     title: bookTitle,
     mainCharacter:bookCharacter,
+    pageCount: calculatePageCount(bookTitle),
     genre: 'fantasy',
   }
-  mahBook.pageCount = calculatePageCount(bookTitle)
+  // mahBook.pageCount = calculatePageCount(bookTitle)
   return mahBook
 }
 
