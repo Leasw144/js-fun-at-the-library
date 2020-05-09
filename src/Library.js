@@ -12,11 +12,16 @@ function createLibrary(name, book) {
 
 function addBook(library, book) {
   var whatGenre = book.genre;
-  console.log('first log', library.shelves.fantasy)
-  if(whatGenre === library.shelves.fantasy) {
-    console.log('second log', whatGenre)
+  console.log(whatGenre)
+  if(whatGenre === 'fantasy') { 
     library.shelves.fantasy.push(book)
     }
+  else if (whatGenre === 'fiction') {
+    library.shelves.fiction.push(book)
+  }
+  else if (whatGenre === 'nonFiction') {
+    library.shelves.nonFiction.push(book)
+  }
 }
 
 
