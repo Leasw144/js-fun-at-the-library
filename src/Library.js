@@ -24,9 +24,12 @@ function addBook(library, book) {
   }
 }
 
+function checkoutBook() {
+
+}
 
 module.exports = {
   createLibrary: createLibrary,
   addBook: addBook,
-  // checkoutBook: checkoutBook
+  checkoutBook: checkoutBook
 };
