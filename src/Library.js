@@ -11,20 +11,20 @@ function createLibrary(name) {
 }
 
 function addBook(library, book) {
-  var whatGenre = book.genre;
-  if(whatGenre === 'fantasy') { 
+  var bookGenre = book.genre;
+  if(bookGenre === 'fantasy') { 
     library.shelves.fantasy.push(book)
     }
-  else if (whatGenre === 'fiction') {
+  else if (bookGenre === 'fiction') {
     library.shelves.fiction.push(book)
   }
-  else if (whatGenre === 'nonFiction') {
+  else if (bookGenre === 'nonFiction') {
     library.shelves.nonFiction.push(book)
   }
 }
 
 function checkoutBook(library, book) {
-  var genreList = Object.keys(library.shelves) //returns [fantasy, nonFiction, fiction]
+  var genreList = Object.keys(library.shelves)
   for (var i = 0; i < genreList.length; i++) {
     var shelfGenre = genreList[i]
     var bookOnShelf = library.shelves[shelfGenre]
