@@ -27,8 +27,7 @@ class Librarian {
   }
 
   calculateLateFee(days) {
-    var fee = Math.ceil(days * .25)
-    return fee
+    return Math.ceil(days * .25)
   }
 
 }
