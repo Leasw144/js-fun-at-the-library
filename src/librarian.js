@@ -12,9 +12,25 @@ class Librarian {
   }
 
   findBook(book) {
-
-    return `Yes, we have ${book}`
+    var genreList = Object.keys(this.library.shelves)
+    for (var i = 0; i < genreList.length; i++) {
+      var shelfGenre = genreList[i]
+      var bookOnShelf = this.library.shelves[shelfGenre]
+      for (var z = 0; z < bookOnShelf.length; z++) {
+        if (bookOnShelf[z].title === book) {
+          bookOnShelf.splice(z, 1)
+          return `Yes, we have ${book}`
+        }
+      }
+    }
+    return `Sorry, we do not have ${book}`
   }
+
+  calculateLateFee(days) {
+    var fee = Math.ceil(days * .25)
+    return fee
+  }
+
 }
 
 module.exports = Librarian;
